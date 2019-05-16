@@ -1,0 +1,5 @@
+node_modules/
+src/style/index.scss
+src/style/index.css.map
+src/style/sidePanel.scss
+src/style/sidePanel.css.map
