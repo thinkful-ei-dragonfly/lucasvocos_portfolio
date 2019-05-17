@@ -52,7 +52,7 @@ class Project {
           <div class="projectDesc">
             <p>${project.desc}</p>
             <ul>
-              <p class="caps">Skills</p>
+              <p class="caps">Tech Stack</p>
               ${techStack}
             </ul>
           </div>

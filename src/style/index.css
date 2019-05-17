@@ -138,12 +138,52 @@ main .projects .project .projectContent .projectInfo .projectTitle p {
 main .projects .project .projectContent .projectInfo .projectTitle a:hover {
   color: #00f;
 }
+@media (max-width: 750px) {
+  main .projects .project .projectContent {
+    max-width: 100%;
+  }
+  main .projects .project .projectContent .projectInfo {
+    flex-direction: column;
+  }
+  main .projects .project .projectContent .projectInfo .projectTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  main .projects .project .projectContent .projectInfo .projectTitle h2,
+main .projects .project .projectContent .projectInfo .projectTitle p {
+    margin: 0;
+    font-size: 24px;
+  }
+  main .projects .project .projectContent .projectInfo .projectDesc {
+    width: 100%;
+  }
+}
+
+#left {
+  transform: rotate(-90deg);
+  left: -60px;
+}
+@media (max-width: 750px) {
+  #left {
+    left: 20px;
+  }
+}
+
+#right {
+  transform: rotate(90deg);
+  right: -30px;
+}
+@media (max-width: 750px) {
+  #right {
+    right: 20px;
+  }
+}
 
 #left,
 #right {
   position: fixed;
-  top: 50%;
-  bottom: 50%;
   text-align: center;
   height: 1em;
   transform-origin: center;
@@ -157,15 +197,19 @@ main .projects .project .projectContent .projectInfo .projectTitle a:hover {
 #right a {
   text-decoration: none;
 }
-
-#left {
-  transform: rotate(-90deg);
-  left: -60px;
-}
-
+@media (min-width: 750px) {
+  #left,
 #right {
-  right: -30px;
-  transform: rotate(90deg);
+    top: 50%;
+    bottom: 50%;
+  }
+}
+@media (max-width: 750px) {
+  #left,
+#right {
+    bottom: 20px;
+    transform: rotate(0);
+  }
 }
 
 .hidden {
