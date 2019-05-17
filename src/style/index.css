@@ -187,4 +187,8 @@ ul li::before {
   margin-right: 10px;
 }
 
+.projects li.project::before {
+  content: "";
+}
+
 /*# sourceMappingURL=index.css.map */

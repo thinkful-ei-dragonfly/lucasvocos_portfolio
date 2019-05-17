@@ -58,38 +58,51 @@ class Project {
           </div>
         </div>
       </div>
-    </li>`
+    </li>`;
     $('.projects').html(html);
   }
 
   findNext(){
-    let currentProj = this.projects.find(project => project.active === true);
     let nextProj;
 
     for (var i = 0; i < this.projects.length; i++) {
-      this.projects.indexOf(currentProj);
-      nextProj = this.projects[i +1];
+      if (this.projects[i].active === true) {
+        this.projects[i].active = false;
+        nextProj = this.projects[i + 1];
 
-      break;
+        if (i + 1 >= this.projects.length) {
+          i = 0;
+          nextProj = this.projects[i];
+          nextProj.active = true;
+        }
+        nextProj.active = true;
+        break;
+      }
+
+
     }
-    currentProj.active = false;
-    nextProj.active = true;
-
     this.render(nextProj);
   }
   findPrev(){
-      let currentProj = this.projects.find(project => project.active === true);
       let prevProj;
-      debugger;
-      for (var i = 0; i < this.projects.length; i++) {
-        this.projects.indexOf(currentProj);
-        prevProj = this.projects[0];
-        debugger;
-        break;
-      }
-      currentProj.active = false;
-      prevProj.active = true;
 
+      for (var i = 0; i < this.projects.length; i--) {
+        if (this.projects[i].active === true) {
+          this.projects[i].active = false;
+          prevProj = this.projects[i - 1];
+
+          if (i - 1 < 0) {
+            debugger;
+            i = this.projects.length - 1;
+            prevProj = this.projects[i];
+            prevProj.active = true;
+          }
+          prevProj.active = true;
+          break;
+        }
+
+
+      }
 
       this.render(prevProj);
   }
