@@ -92,7 +92,6 @@ class Project {
           prevProj = this.projects[i - 1];
 
           if (i - 1 < 0) {
-            debugger;
             i = this.projects.length - 1;
             prevProj = this.projects[i];
             prevProj.active = true;
