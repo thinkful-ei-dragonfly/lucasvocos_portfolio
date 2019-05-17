@@ -28,12 +28,6 @@ module.exports = {
           'file-loader'
         ]
       }
-    ],
-    loaders: [
-      {
-        test: /\.scss$/,
-        loader: 'style-loader!css-loader!sass-loader'
-      }
     ]
   }
 };
