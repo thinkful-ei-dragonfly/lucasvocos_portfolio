@@ -1,19 +1,16 @@
 import $ from 'jquery';
-import slick from 'slick-carousel';
+import eventHandler from './eventHandler'
 import 'normalize.css';
+import Project from './store.js'
+
 require('./style/index.css');
 
 function main(){
-  console.log("hello world");
+  eventHandler.handleContact();
+  eventHandler.handleClose();
+  eventHandler.handleNavigation();
 
-  $('.contact').on('click', event => {
-    event.preventDefault();
-    $('.sidePanelContainer, .sidePanel').addClass('nav-open');
-  })
-  $('.close').on('click',event => {
-    event.preventDefault();
-    $('.sidePanelContainer, .sidePanel').removeClass('nav-open');
-  })
-  // $('.project').slick();
+  const store = new Project();
+  store.init();
 }
 $(main);

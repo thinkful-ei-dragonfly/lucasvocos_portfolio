@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   letter-spacing: 0.05em;
@@ -22,6 +23,10 @@ h3,
 h4,
 p {
   font-weight: 400;
+}
+
+a {
+  color: inherit;
 }
 
 header.header {
@@ -83,6 +88,16 @@ header.header h2:hover {
 .sidePanelContainer .sidePanel.nav-open {
   transform: translateX(0);
 }
+.sidePanelContainer .sidePanel .innerPanel {
+  margin-top: 75px;
+  font-size: 1.25em;
+}
+.sidePanelContainer .sidePanel .innerPanel .caps {
+  text-transform: uppercase;
+}
+.sidePanelContainer .sidePanel .innerPanel p:first-of-type {
+  margin-top: 0;
+}
 @media (max-width: 750px) {
   .sidePanelContainer .sidePanel {
     width: 75%;
@@ -100,11 +115,76 @@ main .projects {
   padding-inline-start: 30px;
 }
 main .projects .project .projectContent {
-  max-width: 75%;
+  max-width: 66%;
   margin: 0 auto;
 }
 main .projects .project .projectContent img {
   width: 100%;
+}
+main .projects .project .projectContent .projectInfo {
+  display: flex;
+  justify-content: space-between;
+}
+main .projects .project .projectContent .projectInfo .projectTitle,
+main .projects .project .projectContent .projectInfo .projectDesc {
+  width: 50%;
+}
+main .projects .project .projectContent .projectInfo .projectTitle h2 {
+  margin-bottom: 0;
+}
+main .projects .project .projectContent .projectInfo .projectTitle p {
+  line-height: 0.5em;
+}
+main .projects .project .projectContent .projectInfo .projectTitle a:hover {
+  color: #00f;
+}
+
+#left,
+#right {
+  position: fixed;
+  top: 50%;
+  bottom: 50%;
+  text-align: center;
+  height: 1em;
+  transform-origin: center;
+}
+#left p,
+#right p {
+  margin: 0;
+  text-transform: uppercase;
+}
+#left a,
+#right a {
+  text-decoration: none;
+}
+
+#left {
+  transform: rotate(-90deg);
+  left: -60px;
+}
+
+#right {
+  right: -30px;
+  transform: rotate(90deg);
+}
+
+.hidden {
+  display: none;
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+ul li::before {
+  content: "⬏";
+  display: inline-block;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=index.css.map */
