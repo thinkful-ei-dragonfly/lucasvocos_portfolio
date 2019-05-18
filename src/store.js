@@ -86,7 +86,7 @@ class Project {
   findPrev(){
       let prevProj;
 
-      for (var i = 0; i < this.projects.length; i--) {
+      for (var i = 0; i < this.projects.length; i++) {
         if (this.projects[i].active === true) {
           this.projects[i].active = false;
           prevProj = this.projects[i - 1];
@@ -99,8 +99,6 @@ class Project {
           prevProj.active = true;
           break;
         }
-
-
       }
 
       this.render(prevProj);
