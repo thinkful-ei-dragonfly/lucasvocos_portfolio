@@ -39,27 +39,27 @@ class Project {
     if (!project.url) {
       url = '';
     }
-    let html = `
-    <li class="project" role="listitem">
-      <div class="projectContent">
-        <img src="${project.img}" alt="">
-        <div class="projectInfo">
-          <div class="projectTitle">
-            <h2>${project.title}</h2>
-            <p><a href="${project.github}" target="_blank">Github</a> </p>
-            ${url}
-          </div>
-          <div class="projectDesc">
-            <p>${project.desc}</p>
-            <ul>
-              <p class="caps">Tech Stack</p>
-              ${techStack}
-            </ul>
-          </div>
-        </div>
-      </div>
-    </li>`;
-    $('.projects').html(html);
+    // let html = `
+    // <li class="project" role="listitem">
+    //   <div class="projectContent">
+    //     <img src="${project.img}" alt="">
+    //     <div class="projectInfo">
+    //       <div class="projectTitle">
+    //         <h2>${project.title}</h2>
+    //         <p><a href="${project.github}" target="_blank">Github</a> </p>
+    //         ${url}
+    //       </div>
+    //       <div class="projectDesc">
+    //         <p>${project.desc}</p>
+    //         <ul>
+    //           <p class="caps">Tech Stack</p>
+    //           ${techStack}
+    //         </ul>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </li>`;
+    // $('.projects').html(html);
   }
 
   findNext(){

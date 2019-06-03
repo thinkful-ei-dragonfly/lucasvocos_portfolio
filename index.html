@@ -12,9 +12,9 @@
     <title>Lucas Vocos Portfolio</title>
   </head>
   <body>
-    <header class="header" role="banner">
-      <h1 class="home">Lucas Vocos</h1>
-      <h2 class="contact">Contact</h2>
+    <header class="header greyHeader" role="banner">
+      <h1 class="home">Header Name</h1>
+      <h2 class="contact">Contact Button</h2>
     </header>
 
     <div class="sidePanelContainer">
@@ -23,7 +23,20 @@
             <a href="#" class="close">(close)</a>
         </header>
         <div class="innerPanel" role="contentinfo">
-          <p>Lucas Vocos is a Web Developer & Designer based in Detroit, Michigan.</p>
+          <h2>Contact / About Section</h2>
+          <p>Descriptive paragraph.</p>
+          <p>Lorem ipsum lorem ipsum lorem ipsum</p>
+          <ul>
+            <li>Skills</li>
+            <li>Tech Stack</li>
+          </ul>
+          <p>Contact Info</p>
+          <ul>
+            <li>Github</li>
+            <li>LinkedIn</li>
+            <li>etc.</li>
+          </ul>
+          <!-- <p>Lucas Vocos is a Web Developer & Designer based in Detroit, Michigan.</p>
           <p>He has a passion for people, problem solving, technology, soccer, and music.</p>
           <ul class="skills">
             <p class="caps">Skills:</p>
@@ -36,8 +49,8 @@
           </ul>
           <p class="caps">Contact</p>
           <p><a href="https://github.com/lucasvocos" target="_blank">Check my code on Github</a> </p>
-          <p><a href="https://www.linkedin.com/in/lucasvocos/" target="_blank">Find me on LinkedIn</a> </p>
-          <p><a href="mailto:lucasvocos@gmail.com">Send me an email</a> </p>
+          <p><a href="https://www.linkedin.com/in/lucasvocos/" target="_blank">Find me on LinkedIn</a> </p> -->
+          <!-- <p><a href="mailto:lucasvocos@gmail.com">Send me an email</a> </p> -->
         </div>
 
 
@@ -45,17 +58,39 @@
     </div>
 
     <aside id="left" role="navigation">
-      <p><a href="#">Previous Project</a> </p>
+      <p><a href="#">Prev</a> </p>
     </aside>
 
     <main role="main">
       <ul class="projects" role="list">
+        <li class="project" role="listitem">
+          <div class="projectContent">
+            <img src="/src/img/placeholder.png" alt="">
+            <div class="projectInfo">
+              <div class="projectTitle">
+                <h2>Project Title</h2>
+                <p><a href="#" target="_blank">Github Link</a> </p>
+              </div>
+              <div class="projectDesc">
+                <p>lorem ipsum lorem ipsum</p>
+                <ul>
+                  <p class="caps">Tech Stack</p>
+                  <ul>
+                    <li>Tech</li>
+                    <li>Stack</li>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
       </ul>
     </main>
 
     <aside id="right" role="navigation">
-      <p><a href="#">Next Project</a></p>
+      <p><a href="#">Next</a></p>
     </aside>
+
     <script src="./dist/index_bundle.js" charset="utf-8"></script>
   </body>
 </html>
