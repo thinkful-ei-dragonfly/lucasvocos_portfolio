@@ -7,13 +7,13 @@ body {
 }
 
 main .projects, header.header {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
-@media (max-width: 750px) {
+@media (min-width: 750px) {
   main .projects, header.header {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -30,11 +30,10 @@ a {
 }
 
 header.header {
-  border: 1px solid grey;
-  background-color: #BFC3BE;
   text-transform: uppercase;
   padding-top: 24px;
   display: flex;
+  background: grey;
   justify-content: space-between;
   position: -webkit-sticky;
   position: -moz-sticky;
@@ -70,10 +69,10 @@ header.header .contact {
 }
 .sidePanelContainer .sidePanel {
   position: absolute;
+  background: lightgrey;
   top: 0;
   right: 0;
   bottom: 0;
-  background: white;
   color: #222;
   border-left: 1px solid #222;
   transform: translateX(100%);
@@ -96,8 +95,6 @@ header.header .contact {
 .sidePanelContainer .sidePanel .innerPanel {
   margin-top: 75px;
   font-size: 1.25em;
-  background-color: #BFC3BE;
-  height: 50vh;
 }
 .sidePanelContainer .sidePanel .innerPanel .caps {
   text-transform: uppercase;
@@ -135,7 +132,8 @@ main .projects .project .projectContent .projectInfo {
 }
 main .projects .project .projectContent .projectInfo .projectTitle,
 main .projects .project .projectContent .projectInfo .projectDesc {
-  background: grey;
+  background: lightgray;
+  border: 1px solid grey;
 }
 main .projects .project .projectContent .projectInfo .projectTitle {
   display: flex;
@@ -165,10 +163,10 @@ main .projects .project .projectContent .projectInfo .projectDesc {
   }
   main .projects .project .projectContent .projectInfo .projectTitle p,
 main .projects .project .projectContent .projectInfo .projectDesc p {
-    margin-top: 0.5em;
+    margin-top: 15px;
   }
   main .projects .project .projectContent .projectInfo .projectTitle h2 {
-    margin-top: 0.5em;
+    margin-top: 15px;
     margin-bottom: 0;
   }
   main .projects .project .projectContent .projectInfo .projectTitle p {
@@ -179,34 +177,16 @@ main .projects .project .projectContent .projectInfo .projectDesc p {
   }
 }
 
-#left {
-  transform: rotate(-90deg);
-  left: -60px;
-}
-@media (max-width: 750px) {
-  #left {
-    left: 20px;
-  }
-}
-
-#right {
-  transform: rotate(90deg);
-  right: -30px;
-}
-@media (max-width: 750px) {
-  #right {
-    right: 20px;
-  }
-}
-
 #left,
 #right {
   position: fixed;
   text-align: center;
   height: 1em;
   transform-origin: center;
-  background-color: #BFC3BE;
-  padding: 10px;
+  bottom: 20px;
+  transform: rotate(0);
+  background: lightgray;
+  padding: 5px;
   border: 1px solid grey;
 }
 #left p,
@@ -229,11 +209,24 @@ main .projects .project .projectContent .projectInfo .projectDesc p {
     bottom: 50%;
   }
 }
-@media (max-width: 750px) {
-  #left,
+
+#left {
+  left: 20px;
+}
+@media (min-width: 750px) {
+  #left {
+    transform: rotate(-90deg);
+    left: 0px;
+  }
+}
+
 #right {
-    bottom: 20px;
-    transform: rotate(0);
+  right: 20px;
+}
+@media (min-width: 750px) {
+  #right {
+    transform: rotate(90deg);
+    right: 10px;
   }
 }
 
